@@ -1,8 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
 html {
-    
+    background-color: rgba(122, 191, 191, .5);
 }
 
 body{
     margin: 0 auto;;
     width:414px;
+    display: grid;
+    grid-template-columns: 414px;
+}
+header{
+    background-color: #F2F2F2;
+    position: relative;
+    padding-top: 100px;
+    z-index: -2;
+}
+header menu{
+    width: 414px;
+    display: grid;
+    grid-template-columns: 103px 103px 103px 103px;
+    list-style: none;
+    position: relative;
+    padding-left: 0px;
+    justify-items: center;
+}
+header menu figure figcaption a{
+    color:#EB5428;
+    font-size: 20px;
+    text-align: center;
+}
+header h1 {
+    text-align: center;
+}
+
+header img{
+    width: 414px;
+    position: absolute;
+    z-index: -1;
+}
+
+header menu li {
+    /* display: inline; */
+}
+h1, h2, h3, nav a, nav span, figcaption, menu li, #social li, footer{
+    font-family: 'Bebas Neue', cursive;
+}
+p, dd, li, nav, input{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+dt{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    font-size: 30px;
+}
+h3{
+    font-size: 25px;
+}
+main{
+    background-color: #F2F2F2;
+    margin-top: 463px;
+}
+main h2{
+    text-align: center;
+}
+main p{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+dl{
+    display: flex;
+}
+nav{
+    width: 414px;
+    background-color:;
+    position: absolute;
+    top: -41px;
+
+}
+nav h2 {
+    visibility: hidden;
+    height: 0px;
+}
+
+a:hover, input:hover {
+    /* background-color: #590242; */
+}
+
+nav ul {
+    width: 414px;
+    text-align: center;
+    margin-top:-24px;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+nav ul img{
+    display: none;
+}
+nav ul li a {
+    display: block;
+    padding: ;
+    text-decoration: none;
+    color: #EB5428;
+}
+[href="#home"] {
+    background-color: #EB5428;
+    position: absolute;
+    left: 90px;
+    top: 41px;
+    padding: 1px 80px;
+}
+[href="#signIn"] {
+    background-color: #ffffff;
+    position: absolute;
+    left: 310px;
+    top: 41px;
+    padding: 11px 32px;
+}
+[href="#signIn2"] {
+    background-color: #fff;
+    color: #000;
+    position: absolute;
+    left: 310px;
+    top: 88px;
+    padding: 0px 32px;
+}
+#fixed{
+    position: fixed;
+}
+#signIn svg{
+    fill: #EB5428;
+}
+label {
+    cursor: pointer;
+    display: block;
+    padding: 20px 23px;
+    margin-top: -10px;
+}
+label svg{
+    background-color: #fff;
+    align-items: center;
+    padding: 14px 25px;
+    margin-top: -19px;
+    margin-left: -23px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 630px;
 }
