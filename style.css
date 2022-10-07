@@ -33,7 +33,9 @@ header menu figure figcaption a{
     font-size: 20px;
     text-decoration: none;
 }
-
+header menu li:hover{
+    color:#fff;
+}
 header h1 {
     text-align: center;
 }
@@ -119,6 +121,12 @@ footer menu figure figcaption a{
     font-size: 20px;
     text-decoration: none;
 }
+footer menu figure figcaption a:hover{
+    background-color: #EB5428;
+    color:#fff;
+    padding: 0px 5px;
+
+}
 footer p{
     font-weight: bold;
     position: absolute;
@@ -128,9 +136,10 @@ footer p{
 }
 nav{
     width: 414px;
+    height: 104px;
     position: absolute;
     top: -41px;
-
+    box-shadow: 0px 5px 15px black;
 }
 nav h2 {
     visibility: hidden;
@@ -235,6 +244,10 @@ aside img{
 }
 aside p{
     line-height: 1em;
+}
+aside section:hover{
+    background-color: #F7A311;
+    cursor: pointer;
 }
 #asideColumn{
     width: 414px;
