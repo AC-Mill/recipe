@@ -24,11 +24,16 @@ header menu{
     padding-left: 0px;
     justify-items: center;
 }
+header menu figure {
+    margin: 0px;
+    margin-left: -27px;
+}
 header menu figure figcaption a{
     color:#EB5428;
     font-size: 20px;
-    text-align: center;
+    text-decoration: none;
 }
+
 header h1 {
     text-align: center;
 }
@@ -39,11 +44,12 @@ header img{
     z-index: -1;
 }
 
-header menu li {
-    /* display: inline; */
-}
+
 h1, h2, h3, nav a, nav span, figcaption, menu li, #social li, footer{
     font-family: 'Bebas Neue', cursive;
+}
+dl{
+    padding-left: 10px;
 }
 p, dd, li, nav, input{
     font-family: 'Montserrat', sans-serif;
@@ -53,6 +59,10 @@ dt{
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
     font-size: 16px;
+    display: inline-flex;
+}
+dd{
+    display: inline-flex;
 }
 h1{
     font-size: 40px;
@@ -74,12 +84,50 @@ main p{
     padding-left: 10px;
     padding-right: 10px;
 }
-dl{
-    display: flex;
+footer{
+    width: 414px;
+    background-color: #fff;
+}
+footer h2, footer h3{
+    visibility: hidden;
+    font-size: 1px;
+}
+footer h3{
+    text-align: center;
+}
+footer img{
+    width: 200px;
+    display: block;
+    margin-left: 100px;
+    padding-bottom: 45px;
+}
+footer menu{
+    width: 414px;
+    display: grid;
+    grid-template-columns: 103px 103px 103px 103px;
+    list-style: none;
+    position: relative;
+    padding-left: 0px;
+    justify-items: center;
+}
+footer menu figure {
+    margin: 0px;
+    margin-left: 11px;
+}
+footer menu figure figcaption a{
+    color:#EB5428;
+    font-size: 20px;
+    text-decoration: none;
+}
+footer p{
+    font-weight: bold;
+    position: absolute;
+    bottom: -2259px;
+    padding-left: 124px;
+    text-align: center;
 }
 nav{
     width: 414px;
-    background-color:;
     position: absolute;
     top: -41px;
 
@@ -88,11 +136,6 @@ nav h2 {
     visibility: hidden;
     height: 0px;
 }
-
-a:hover, input:hover {
-    /* background-color: #590242; */
-}
-
 nav ul {
     width: 414px;
     text-align: center;
@@ -109,9 +152,14 @@ nav ul img{
 }
 nav ul li a {
     display: block;
-    padding: ;
+    padding: 10px;
     text-decoration: none;
     color: #EB5428;
+    z-index: 1;
+}
+nav ul li a:hover{
+    background-color: #EB5428;
+    color: #fff;
 }
 [href="#home"] {
     background-color: #EB5428;
@@ -127,6 +175,9 @@ nav ul li a {
     top: 41px;
     padding: 11px 32px;
 }
+[href="#signIn"]:hover{
+    background-color: #fff;
+}
 [href="#signIn2"] {
     background-color: #fff;
     color: #000;
@@ -135,11 +186,11 @@ nav ul li a {
     top: 88px;
     padding: 0px 32px;
 }
+[href="#signIn2"]:hover{
+    background-color: #fff;
+}
 #fixed{
     position: fixed;
-}
-#signIn svg{
-    fill: #EB5428;
 }
 label {
     cursor: pointer;
@@ -154,9 +205,347 @@ label svg{
     margin-top: -19px;
     margin-left: -23px;
 }
-input {
+#fixed input {
     display: none;
 }
 input:checked ~ ul {
     max-height: 630px;
+}
+.ingredients li{
+    padding: 10px;
+    list-style: square;
+}
+
+ol li{
+    padding: 10px;
+}
+
+aside{
+    background-color: #7ABFBF;
+}
+aside h2{
+    text-align: center;
+}
+aside h3{
+    text-align: center;
+}
+aside img{
+    width: 100px;
+    float: left;
+}
+aside p{
+    line-height: 1em;
+}
+#asideColumn{
+    width: 414px;
+    display: grid;
+    grid-template-columns:1fr;
+}
+#asideColumn img{
+    float: left;
+    margin-top: -66px;
+    padding: 10px;
+}
+#search{
+    position: absolute;
+    top: 50px;
+    padding: 28px 81px;
+    z-index: -1;
+}
+#search button{
+    background-color: #EB5428;
+    border: #EB5428;
+    margin-left: -5px;
+    padding-bottom: 3px;
+}
+#search input{
+    padding-top: 24px;
+    border-style: groove;
+    border-color: #EB5428;
+}
+[placeholder="Find a recipe"]{
+    padding-bottom: 0px;
+}
+input[type="search"]::placeholder{
+    font-size: 16px;
+    margin-bottom: 100px;
+}
+
+@media screen and (min-width:768px){
+    body{
+        width:768px;
+        display: grid;
+        grid-template-columns: 768px;
+    }
+    nav{
+        width: 768px;
+        height: 206px;
+        background-color: #fff;
+    }
+    nav ul {
+        
+        width: 768px;
+        overflow: visible;
+        position: absolute;
+        top: 142px;
+        left: -76px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        justify-items: center;
+    }
+    nav ul img{
+        width: 50px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+    }
+    [href="#home"] {
+        background-color: #EB5428;
+        position:absolute;
+        left: 76px;
+        top: -77px;
+        padding: 0px 0px;
+    }
+    [href="#signIn"] {
+        position: absolute;
+        left: 740px;
+        top: -76px;
+        padding: 12px 32px;
+    }
+    [href="#signIn2"] {
+
+        color: #000;
+        position: absolute;
+        left: 741px;
+        top: -27px;
+        padding: 0px 32px;
+    }
+    label{
+        display: none;
+    }
+    label svg{
+        display: none;
+    }
+    #search{
+        position: absolute;
+        top: -16px;
+        margin-left: 269px;
+        padding: 28px 81px;
+        z-index: 0;
+        position: fixed;
+    }
+    header{
+        background-color: #F2F2F2;
+        position: relative;
+        padding-top: 146px;
+        z-index: -2;
+    }
+    header menu{
+        width: 768px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        list-style: none;
+        position: relative;
+        padding-left: 0px;
+        justify-items: center;
+    }
+    header menu figure {
+        margin: 0px;
+        margin-left: -27px;
+    }
+    header menu figure figcaption a{
+        color:#EB5428;
+        font-size: 20px;
+        text-decoration: none;
+    }
+    
+    header h1 {
+        text-align: center;
+    }
+    
+    header img{
+        width: 768px;
+        position: absolute;
+        z-index: -1;
+    }
+    main{
+        background-color: #F2F2F2;
+        margin-top: 1152px;
+    }
+    #sideByside{
+        width: 768px;
+        display: grid;
+        grid-template-columns: 249px 1fr;
+    }
+    .directions ol li{
+        padding: 25px;
+    }
+    dl{
+        text-align: center;
+    }
+    footer{
+        width: 768px;
+        background-color: #fff;
+        padding-top: 30px;
+    }
+    #asideColumn{
+        display: grid;
+        grid-template-columns: 384px 384px;
+    }
+    #social{
+        float: right;
+    }
+    footer p{
+        position: absolute;
+        bottom: -2115px;
+        padding-left: 124px;
+        text-align: center;
+    }
+}
+@media screen and (min-width:1280px){
+    body{
+        width: 1280px;
+        display: grid;
+        grid-template-columns: 1280px;
+    }
+    nav{
+        width: 1280px;
+        height: 157px;
+        background-color: #fff;
+    }
+    nav ul {
+        width: 1280px;
+        overflow: visible;
+        position: absolute;
+        top: 55px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        justify-items: center;
+    }
+    nav ul li{
+        margin:10px;
+    }
+    nav ul img{
+        width: 75px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        align-items: center;
+    }
+    [href="#home"] {
+        background-color: #EB5428;
+        position:absolute;
+        left: 76px;
+        top: 10px;
+        padding: 25px 28px;
+    }
+    [href="#signIn"] {
+        position: absolute;
+        left: 1279px;
+        top: 26px;
+        padding: 15px;
+    }
+    [href="#signIn2"] {
+
+        color: #000;
+        position: absolute;
+        left: 1295px;
+        top: 78px;
+        padding: 0px 0px;
+    }
+    #search{
+        position: absolute;
+        top: 119px;
+        margin-left: 435px;
+        padding: 28px 81px;
+        z-index: -1;
+    }
+    header{
+        background-color: #F2F2F2;
+        position: relative;
+        padding-top: 184px;
+        z-index: -2;
+    }
+    header menu{
+        width: 90px;
+        height: 744px;
+        background-color: white;
+        border-style: solid;
+        border-color: #EB5428;
+        display: grid;
+        grid-template-columns: 150px;
+        grid-template-rows: 100px 100px 100px 100px;
+        list-style: none;
+        position: relative;
+        padding-left: 55px;
+        justify-items: stretch;
+        align-items: stretch;
+    }
+    header img{
+        width: 500px;
+        margin-left: 145px;
+        margin-top: -766px;
+    }
+    main{
+        background-color: #F2F2F2;
+        margin-top: 0px;
+    }
+    main p {
+        width: 600px;
+        position: absolute;
+        top: 300px;
+        margin-left: 662px;
+    }
+    dl{
+        width: 1280px;
+        height: 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        align-items: start;
+    }
+    dd{
+        display: block;
+    }
+    #deetsLarge{
+        width: 1280px;
+        height: 130px;
+        background-color: #000;
+        color: #7ABFBF;
+    }
+    #sideByside{
+        width: 1280px;
+        display: grid;
+        grid-template-columns: 249px 1fr;
+    }
+    .directions ol li{
+        padding: 25px;
+    }
+    #asideColumn{
+        display: grid;
+        grid-template-columns: repeat(4, 320px);
+    }
+    #asideColumn img{
+        float: none;
+        width: 200px;
+        margin-top: 0;
+        padding-left: 60px;
+    }
+    aside h3{
+        position: absolute;
+        bottom: -1132px;
+        margin-left: 60px;
+    }
+    aside p{
+        margin-left: 60px;
+    }
+    footer{
+        width: 1280px;
+        background-color: #fff;
+        padding-top: 30px;
+    }
+    footer p{
+        position: absolute;
+        bottom: -1281px;
+        padding-left: 309px;
+        text-align: center;
+    }
 }
